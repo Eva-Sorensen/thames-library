@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ test }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
@@ -94,15 +94,15 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
+import { defineProps, ref } from "vue";
+interface Props {
+  msg: string;
+}
 
-export default defineComponent({
-  name: "HelloWorld",
-  props: {
-    msg: String,
-  },
-});
+const props = defineProps<Props>();
+
+const test = ref<string>(props.msg + " max coll");
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
