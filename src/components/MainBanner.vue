@@ -11,14 +11,16 @@
           required
         />
         <button class="btn btn-search">
-          <ph-magnifying-glass :size="32" />
+          <search-icon fillColor="#000000" />
         </button>
       </div>
     </div>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import SearchIcon from "vue-material-design-icons/Magnify.vue";
+</script>
 
 <style scoped lang="scss">
 .banner-section {
